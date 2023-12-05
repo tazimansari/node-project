@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+
+<body>
+    <div class="container-main">
+        <div class="container-1">
+            <div class="cont">
+                <div class="container-2">
+                    <div class="head-1">
+                        <i class="fa-solid fa-database" style="color: #197b74"></i>
+                        <h4 id="totalRequests"><%= totalRequests %></h4>
+                    </div>
+                    <p>Total Request</p>
+                </div>
+                <div class="container-3">
+                    <div class="head-1">
+                        <i class="fa-solid fa-database" style="color: #197b74"></i>
+                        <h4 id="uniqueUrls"><%= uniqueUrl %></h4>
+                    </div>
+                    <p>Unique Url</p>
+                </div>
+                <div class="container-4">
+                    <div class="head-1">
+                        <i class="fa-brands fa-discord" style="color: #197b74"></i>
+                        <h4>0000</h4>
+                    </div>
+                    <p>Stakeholders</p>
+                </div>
+            </div>
+            <div class="search-emoji-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <img src="../assets/emoji.png" alt="My Image">
+            </div>
+        </div>
+        <div class="container-table">
+            <h1>Response Time with URl</h1>
+            <i class="fa-solid fa-square-arrow-up-right" style="color: #000000; padding-left: 4em"></i>
+        </div>
+
+        <div class="transitions-table">
+            <table id="avgResponseTimeTable">
+                <tbody>
+                    <tr>
+                        <th> URL</th>
+                        <th> Max Average Response Time</th>
+                        <th> Maximum Response Time</th>
+                        <th> Minimum Response Time</th>
+                    </tr>
+                    <% top5Average_Response_Time.map(value => { %>
+                        <tr>
+                            <td><%= value.url %></td>
+                            <td><%= value.avg_response_time %></td>
+                            <td><%= value.max_response_time %></td>
+                            <td><%= value.min_response_time %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th> URL </th>
+                        <th> Maximum Response Time</th>
+                        <th> Average Response Time</th>
+                        <th> Minimum Response Time</th>
+                    </tr>
+                    <% top5Maximum_Response_Time.map(value =>{ %>
+                        <tr>
+                            <td><%= value.url %></td>
+                            <td><%= value.max_response_time %></td>
+                            <td><%= value.avg_response_time %></td>
+                            <td><%= value.min_response_time %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th> URL </th>
+                        <th> Minimum Response Time</th>
+                        <th> Average Response Time</th>
+                        <th> Maximum Response Time</th>
+                    </tr>
+                    <% top5Minimum_Response_Time.map(value =>{ %>
+                        <tr>
+                            <td><%= value.url %></td>
+                            <td><%= value.min_response_time %></td>
+                            <td><%= value.avg_response_time %></td>
+                            <td><%= value.max_response_time %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

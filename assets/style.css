@@ -1,0 +1,90 @@
+
+.container-1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.cont{
+    display: flex;
+    gap: 2em;
+}
+
+.container-table{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table th{
+    background-color: aliceblue;
+    color: black;
+    font-weight: 600;
+}
+
+table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table td, table th {
+    width: 20%;
+    overflow: hidden;
+    border: 1px solid gray;
+    word-break: break-all;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+.search-emoji-container {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+}
+
+img{
+    height: 90px;
+}
+
+.container-2, .container-3, .container-4 {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.head-1 {
+    display: flex;
+    align-items: center;
+}
+
+.fa-solid {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.fa-brands {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 30px;
+    padding-left: 12px;
+
+}
+
+p {
+    font-size: 15px;
+    margin: 5px 35px;
+}
